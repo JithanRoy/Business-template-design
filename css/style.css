@@ -11,6 +11,10 @@
     --third-color: #727b99;
 }
 
+#menu-toggle {
+    display: none;
+}
+
 .custom-btn {
     background: var(--main-color);
     padding: 10px 34px;
@@ -59,6 +63,7 @@ nav.navigation {
     gap: 1rem;
     margin-bottom: 0px;
 }
+
 .menu-item {
     display: flex;
 }
@@ -125,7 +130,6 @@ p.banner-description {
 .section-head {
     display: flex;
     justify-content: center;
-    margin: 35px 0px;
 }
 .section-head-content {
     text-align: center;
@@ -268,8 +272,6 @@ footer {
     border-radius: 20px 20px 0px 0px;
     padding-top: 50px;
 }
-.footer-section {
-}
 
 .footer-contain {
     text-align: center;
@@ -321,16 +323,61 @@ footer {
 
 
 /* responsive  */
-#menu-toggle {
-    display: none;;
-}
+
 @media only screen and (max-width: 1050px) {
     #menu-toggle {
         display: block;
+        font-size: 20px;
     }
+
+    .section-head-content h1 {
+        font-size: 36px;
+    }
+
+    .menu-item.open-menu .menu {
+        display: block;
+        margin-right: 0px !important;
+    }
+
     .menu {
-        display: none;
+        width: 60%;
+        margin-right: -400px;
+        transition: .5s;
+        position: absolute;
+        background: #000;
+        right: 0;
+        top: 40px;
+        height: 100vh;
+        text-align: center;
+        display: block;
+        border-radius: 5px;
+        margin-top: 36px;
+        background: #ffffff;
+        box-shadow: 1px 6px 20px 1px #ddd;
     }
+
+    nav.navigation {
+        padding: 20px 0px;
+        position: absolute;
+        background: #fff;
+        position: fixed;
+        box-shadow: 3px 5px 20px 1px lightgray;
+    }
+    
+    .menu-list {
+        justify-content: space-between;
+        align-content: center;
+        gap: 1rem;
+        padding: 0px;
+        margin-right: 0px;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    #contact-btn {
+        margin-left: 0px;
+    }
+
     .banner-content {
         flex-direction: column;
         margin-top: 100px;
@@ -360,5 +407,11 @@ footer {
     }
     .all-rights {
         margin: 30px 0px;
+    }
+    ul.work-ul {
+        margin: 0px 19px;
+    }
+    .work-list {
+        font-size: 16px;
     }
   }
